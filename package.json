@@ -1,0 +1,28 @@
+{
+  "name": "thoth-for-vscode",
+  "displayName": "Thoth for VS Code",
+  "description": "Shares the active file, selection and diagnostics with the thoth coding agent",
+  "version": "0.1.0",
+  "publisher": "thoth",
+  "license": "MIT",
+  "private": true,
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./index.js",
+  "contributes": {},
+  "scripts": {
+    "build": "bun build index.ts --outfile index.js --format cjs --target node --external vscode"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5"
+  }
+}
